@@ -29,20 +29,25 @@ $row = mysqli_fetch_array($result);
   .navbar-brand a{
     font-size:70px;
   }
+  .mid-img img{
+    width:68%;
+    height:600px;
+    margin:5% 4% 4% 15%;
+  }
   .card {
     width: 70%;
-
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     display: inline-block;
     cursor: pointer;
     justify-content: center; /* 水平置中 */
     align-items: center; /* 垂直置中 */
-    
+    position: absolute;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 40px 70px 30px 200px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    margin:40px 300px;
+    margin-left:35%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
   }
   .card:hover{
     background-color: #f5f5f5;
@@ -54,6 +59,17 @@ $row = mysqli_fetch_array($result);
   }
 </style>
 <head>
+<script> 
+  function check_alert(){
+    if(confirm("是否要登出?") == true){
+      window.alert("您已登出");
+      window.location.href = "index.php"; 
+    } else{
+      window.location.href = "homepage.php"; 
+    }
+  }
+ 
+</script>   
 <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -86,14 +102,16 @@ $row = mysqli_fetch_array($result);
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="index.php">登出</a>
+            <a class="nav-link" onclick="check_alert()">登出</a>
             
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  
+  <div class = "mid-img">
+    <img src="background_pattern.jpg" alt="fcu"></img>
+  </div>
   <div class="card-group"> 
     <a href="selectpage.php"> 
       <div class="card">
@@ -113,8 +131,6 @@ $row = mysqli_fetch_array($result);
         </div>
       </div>
     </a> 
-  </div>
-  <div class="card-group">  
     <a href="week.php">
       <div class="card">  
         <div class="card-body">
@@ -134,6 +150,8 @@ $row = mysqli_fetch_array($result);
         </div>
       </div>
     </a>
+    <br>
+    <br>
   </div>
 
   <br>
