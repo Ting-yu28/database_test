@@ -49,10 +49,7 @@ switch (get_request_var('action')) {
 		$result = mysqli_query($conn, $sql) or die('MySQL query error');	
 		$row = mysqli_fetch_array($result);
 		$course_name = $row['course_name'];
-
-
-		echo "已加選課程 : " .  $course_name . "  " . " course_id : " . $id;
-		
+		echo "<script>" . alert('已加選課程' . $course_name . ' course_id : ' . $id . '!!') . "</script>";
 		break;
 }
 

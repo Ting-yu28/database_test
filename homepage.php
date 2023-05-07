@@ -29,10 +29,22 @@ $row = mysqli_fetch_array($result);
   .navbar-brand a{
     font-size:70px;
   }
-  .mid-img img{
-    width:68%;
-    height:600px;
-    margin:5% 4% 4% 15%;
+  .carousel-item img{
+    width: 1000px;
+    height: 500px; 
+    
+    margin-top:2%;
+    margin-left: 23%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+  }
+  .carousel-item active img{
+    width: 1000px;
+    height: 500px; 
+    margin-top:2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
   }
   .card {
     width: 70%;
@@ -70,7 +82,8 @@ $row = mysqli_fetch_array($result);
   }
  
 </script>   
-<title>Bootstrap Example</title>
+<title>逢甲大學選課系統</title>
+<link  rel="shortcut icon" href="Logo.png" type="image/png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -109,9 +122,36 @@ $row = mysqli_fetch_array($result);
       </div>
     </div>
   </nav>
-  <div class = "mid-img">
-    <img src="background_pattern.jpg" alt="fcu"></img>
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="background_pattern.jpg"  class="d-block">
+      </div>
+      <div class="carousel-item">
+        <img src="notice1.jpg" class="d-block">
+      </div>
+      <div class="carousel-item">
+        <img src="notice2.jpg" class="d-block" >
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
   </div>
+
   <div class="card-group"> 
     <a href="selectpage.php"> 
       <div class="card">
@@ -146,6 +186,15 @@ $row = mysqli_fetch_array($result);
         <div class="card-body">
           <br>
           <h4 class="card-title">學生資料</h4>     
+          <br>
+        </div>
+      </div>
+    </a>
+    <a href="allcourse.php">
+      <div class="card">  
+        <div class="card-body">
+          <br>
+          <h4 class="card-title">所有課程</h4>     
           <br>
         </div>
       </div>

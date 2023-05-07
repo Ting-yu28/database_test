@@ -15,7 +15,6 @@ if(isset($_SESSION["student_id"])) {
 	$total_credits = $row['total_credits'];
 
 	$over_selected = 0;
-	
 	//處理加選時的boundary問題
 	if ( (30 - $total_credits) >= 3) { 
 		$sql = "select course_id, course_name, department, grade, credits, max_people, current_people, category 
@@ -44,7 +43,6 @@ if(isset($_SESSION["student_id"])) {
 	}
 
 
-
 	//印出我的可選課程列表
 	$result = mysqli_query($conn, $sql) or die('MySQL query error1');
 	html_start_box('******  我的可選課程列表  ******  ', '100%', '   ', '5', 'left', '   ');
@@ -62,9 +60,9 @@ if(isset($_SESSION["student_id"])) {
 	);
 
 	if ($over_selected == 1) {
-
-			echo "已達到學分上限，不能再加選囉 !!";
-
+		$false_alert = "window.alert('已達到學分上限，不能再加選囉 !!')";
+		echo "<script>".$false_alert."</script>";
+		
 	} else {
 
 		html_header($display_text, 2, false);
