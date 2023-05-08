@@ -42,7 +42,13 @@ include_once('html_utility.php');
 
 ?>
 
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title>所有課程</title>
+	<link id="fcu_selected" rel="shortcut icon" href="Logo.png" type="image/png">
+</head>
+</html>
 <?php
 $conn->close();
 ?>

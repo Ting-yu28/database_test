@@ -1,4 +1,11 @@
 <a href = "homepage.php"> 回上頁(Homepage) </a> <p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我的課表</title>
+	<link id="fcu_selected" rel="shortcut icon" href="Logo.png" type="image/png">
+</head>
+</html>
 <?php
 include_once('db.php');
 include_once('html.php');

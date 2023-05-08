@@ -12,6 +12,12 @@ $result = mysqli_query($conn, $sql) or die('MySQL query error : select total_cre
 $row = mysqli_fetch_array($result);
 ?>
 <html>
+
+<head>
+	<title>學生資訊</title>
+	<link id="fcu_selected" rel="shortcut icon" href="Logo.png" type="image/png">
+</head>
+
 <body>
     <div id="show">
         <form>

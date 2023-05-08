@@ -34,7 +34,7 @@ $row = mysqli_fetch_array($result);
     height: 500px; 
     
     margin-top:2%;
-    margin-left: 23%;
+    margin-left: 13%;
     margin-right: 10%;
     margin-bottom: 50px;
   }

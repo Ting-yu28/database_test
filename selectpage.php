@@ -84,7 +84,13 @@ if(isset($_SESSION["student_id"])) {
 
 }
 ?>
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title>選課頁面</title>
+	<link id="fcu_select" rel="shortcut icon" href="Logo.png" type="image/png">
+</head>
+</html>
 
 <?php
 $conn->close();
